@@ -1,0 +1,61 @@
+@use './mixin.scss' as *;
+@use './variables.scss' as *;
+
+.header {
+    background-color: $ui-defolt-color;
+    padding: 54px 0 74px;
+
+    .header_contant {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .haeder_logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 35px;
+            line-height: 1;
+            color: rgba(0, 0, 0, 1);
+
+            .header_logo-name {
+                @include ui-gilroy (800);
+
+                @media screen and (max-width:$ui-breakpoint-md) {
+                    visibility: hidden;
+                }
+            }
+
+            .header_logo-place {
+                @include ui-gilroy (400);
+                text-transform: uppercase;
+
+                @media screen and (max-width:$ui-breakpoint-md) {
+                    display: none;
+                }
+            }
+
+            .header_logo-copy {
+                align-self: flex-start;
+
+                @media screen and (max-width:$ui-breakpoint-md) {
+                    display: none;
+                }
+            }
+        }
+
+        .header_menu {
+            @include ui-gilroy(400);
+            font-size: 25px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: rgba(37, 37, 37, 1);
+        }
+    }
+}
+
+
+
+
+
