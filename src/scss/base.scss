@@ -1,0 +1,21 @@
+@use './mixin.scss' as *;
+@use './variables.scss' as *;
+
+html, body {
+    overflow-x: hidden;
+}
+
+.container {
+    width: 1060px;
+    margin: 0 auto;
+
+    @media screen and (max-width:$ui-breakpoint-xl) {
+        width: 708px;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width:$ui-breakpoint-md) {
+        width: 280px;
+        margin: 0 auto;
+    }
+}

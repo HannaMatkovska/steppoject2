@@ -1,0 +1,11 @@
+@mixin ui-gilroy ($fw) {
+    font-family: 'Gilroy';
+    font-weight: $fw;
+    font-style: normal;
+}
+
+@mixin ui-inter ($fw) {
+    font-family: "Inter", sans-serif;
+    font-weight: $fw;
+    font-style: normal;
+}
