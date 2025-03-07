@@ -5,6 +5,14 @@
     background-color: $ui-defolt-color;
     padding: 54px 0 74px;
 
+    @media screen and (max-width:$ui-breakpoint-xl) {
+        padding: 34px 0 54px;
+    }
+
+    @media screen and (max-width:$ui-breakpoint-md) {
+        padding: 14px 0 34px;
+    }
+
     .header_contant {
         display: flex;
         align-items: center;
