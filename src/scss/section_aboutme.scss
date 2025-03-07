@@ -1,0 +1,142 @@
+@use './mixin.scss' as *;
+@use './variables.scss' as *;
+
+.aboutme {
+    background-color: $ui-defolt-color;
+    text-align: center;
+
+    .aboutme_name {
+        @include ui-inter(600);
+        font-size: 125px;
+        line-height: 1;
+        color: rgba(37, 37, 37, 1);
+        text-transform: uppercase;
+
+        @media screen and (max-width:$ui-breakpoint-xl) {
+            font-size: 80px;
+        }
+
+        @media screen and (max-width:$ui-breakpoint-md) {
+            font-size: 34px;
+        }
+    }
+
+    .aboutme_field {
+        @include ui-inter(300);
+        font-size: 125px;
+        line-height: 1;
+        color: rgba(37, 37, 37, 1);
+        text-transform: uppercase;
+        margin-bottom: 30px;
+
+        @media screen and (max-width:$ui-breakpoint-xl) {
+            font-size: 80px;
+        }
+
+        @media screen and (max-width:$ui-breakpoint-md) {
+            font-size: 34px;
+        }
+    }
+
+    .aboutme_arrow {
+        margin-bottom: 51px;
+    }
+
+    .aboutme_img {
+        width: 100vw;
+        height: auto;
+        display: block;
+        object-fit: fill;
+        margin-bottom: 40px;
+    }
+
+    .aboutme_content {
+        display: grid;
+        grid-template-columns: 695px 330px;
+        column-gap: 35px;
+        align-items: center;
+        padding-bottom: 40px;
+
+        @media screen and (max-width:$ui-breakpoint-xl) {
+           display: block;
+        }
+
+
+        .aboutme_text{
+            @include ui-inter(300);
+            font-size: 25px;
+            line-height: 1.2;
+            color: rgba(37, 37, 37, 1);
+            padding: 10px;
+
+            .aboutme_text-accent {
+                @include ui-inter(800);
+            }
+
+
+        }
+
+        .aboutme_social {
+            background-color: rgba(37, 37, 37, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            padding: 20px;
+
+
+            .aboutme_social-txt {
+                @include ui-inter(500);
+                font-size: 25px;
+                line-height: 1.2;
+                color:rgba(255, 255, 255, 1);
+                text-transform: uppercase;
+                margin-bottom: 5px;
+            }
+            
+            .aboutme_social-wrap {
+                display: flex;
+                column-gap: 10px;
+
+                .aboutme_social-link{
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+        }
+
+        
+    }
+
+}
+
+    .logos {
+        background-color: $ui-defolt-color;
+        border-top: 1px solid rgba(37, 37, 37, 1);
+        border-bottom: 1px solid rgba(37, 37, 37, 1);
+    }
+
+    .logos_wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 15px;
+        padding: 70px 0;
+
+        @media screen and (max-width:$ui-breakpoint-xl) {
+            row-gap: 15px;
+        }
+        
+
+
+        .logos_link {
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 1);
+            border-radius: 50px;
+
+            .logos_link-img {
+                height: 25px;
+                width: 100%;
+            }
+        }  
+    }
+
