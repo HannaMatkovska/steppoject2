@@ -1,0 +1,173 @@
+@use './mixin.scss' as *;
+@use './variables.scss' as *;
+
+
+.selectedwork {
+    background-color: $ui-defolt-color;
+    padding: 70px 0 100px;
+    display: block;
+
+    .selectedwork_title {
+        @include ui-gilroy (300);
+        font-size: 124px;
+        line-height: 1.4;
+        color: rgba(37, 37, 37, 1);
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 50px;
+
+        @media screen and (max-width:($ui-breakpoint-md)) {
+            font-size: 50px;
+        }
+    }
+
+    .selectedwork_content {
+        display: grid;
+        grid-template-columns: repeat(3, 343px);
+        grid-template-rows: repeat(2, 343px);
+        gap: 25px 15px;
+        margin-bottom: 70px;
+        
+
+        @media screen and (max-width:$ui-breakpoint-xl) {
+            grid-template-columns: 708px;
+            grid-template-rows: 708px 708px 210px 708px 708px 210px;  
+        }
+
+        @media screen and (max-width:$ui-breakpoint-md) {
+            grid-template-columns: 280px;
+            grid-template-rows: 280px 280px 190px 280px 280px 190px;
+        }
+
+        .selectedwork_square {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+
+            @media screen and (max-width:$ui-breakpoint-xl) {
+                &:first-child{
+                    grid-column: 1;
+                    grid-row: 3;
+                }
+            }
+            
+
+            .selectedwork_square-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .selectedwork_subtitle {
+                @include ui-inter (600);
+                font-size: 40px;
+                line-height: 1.2;
+                margin-bottom: 30px;
+
+                @media screen and (max-width:$ui-breakpoint-md) {
+                    font-size: 30px;
+                }
+            }
+
+            .selectedwork_square-wrap {
+                display: flex;
+                column-gap: 20px;
+
+                .selectedwork_link{
+                    padding: 15px 30px;
+                    background-color: rgba(255, 255, 255, 1);
+                    border-radius: 50px;
+                    @include ui-gilroy (400);
+                    font-size: 18px;
+                    line-height: 1.2;
+                    text-decoration: none;
+                    color: rgba(37, 37, 37, 1);
+
+                    @media screen and (max-width:$ui-breakpoint-md) {
+                        padding: 10px 25px;
+                        font-size: 16px;
+                    }
+                }
+                
+            }
+
+            .selectedwork_button {
+                align-self: flex-end;
+                margin-top: auto;
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+                background-color: rgba(37, 37, 37, 1);
+                border-radius: 50px;
+                text-decoration: none;
+                padding: 15px 30px;
+
+                @media screen and (max-width:$ui-breakpoint-md) {
+                    padding: 10px 25px;
+                }
+                
+
+                .selectedwork_button-text{
+                    @include ui-gilroy (300);
+                    font-size: 18px;
+                    line-height: 1.2;
+                    color: rgba(255, 255, 255, 1);
+
+                    @media screen and (max-width:$ui-breakpoint-md) {
+                        font-size: 16px;
+                    }
+                    
+                }
+
+                .selectedwork_button-img {
+                    width: 21px;
+                    height: 13px;
+
+                    @media screen and (max-width:$ui-breakpoint-md) {
+                        width: 19px;
+                        height: 11px;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .selectedwork_footer {
+        display: flex;
+        justify-content: center;
+
+        .selectedwork_biglink {
+            padding: 15px 30px;
+            background-color: rgba(255, 255, 255, 1);
+            border-radius: 50px;
+            @include ui-gilroy (400);
+            font-size: 18px;
+            line-height: 1.2;
+            text-decoration: none;
+            color: rgba(37, 37, 37, 1);
+            margin: auto;
+
+            @media screen and (max-width:$ui-breakpoint-md) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    
+}
+
+
+
+
+
+
+
+// 
+// selectedwork_design
+// selectedwork_year
+// 
+// selectedwork_button-text
+// selectedwork_square
+// 
