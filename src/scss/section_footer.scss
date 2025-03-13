@@ -1,0 +1,91 @@
+@use './mixin.scss' as *;
+@use './variables.scss' as *;
+
+.footer{
+  background-color: $ui-defolt-color;
+  padding: 24px 0 34px 0;
+
+  @media screen and (max-width: $ui-breakpoint-xl) {
+    padding: 50px 0 50px 0;
+  }
+  @media screen and (max-width: $ui-breakpoint-md) {
+    padding: 24px 0 24px 0;
+  }
+}
+.footer__content{
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: $ui-breakpoint-md) {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer__copyright{
+    @include ui-gilroy (400);
+    font-size: 18px;
+    line-height: 100%;
+    color: rgba(51, 51, 51, 1);
+
+    @media screen and (max-width: $ui-breakpoint-xl) {
+      font-size: 14px;
+    }
+    @media screen and (max-width: $ui-breakpoint-md) {
+      font-size: 14px;
+    }
+
+      .copyright__bold{
+        @include ui-gilroy (600);
+      }
+  }
+  .footer__social{
+
+      .footer__social-list{
+        display: flex;
+        gap: 10px;
+
+        .footer__social-item{
+          display: block;
+
+            .footer__social-link--facebook{
+              display: block;
+              background-image: url("../img/socials/facebook_black.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+              width: 30px;
+              height: 30px;
+            }
+            .footer__social-link--twitter{
+              display: block;
+              background-image: url("../img/socials/twitter_black.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+              width: 30px;
+              height: 30px;
+           }
+            .footer__social-link--linkedin{
+              display: block;
+              background-image: url("../img/socials/linkedin_black.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+              width: 30px;
+              height: 30px;
+          }
+            .footer__social-link-dribble{
+              display: block;
+              background-image: url("../img/socials/dribble_black.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+              width: 30px;
+              height: 30px;
+          }
+        }
+      }
+  }
+}

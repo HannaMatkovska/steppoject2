@@ -1,0 +1,128 @@
+@use './mixin.scss' as *;
+@use './variables.scss' as *;
+
+.whatido{
+  background-color: $ui-defolt-color;
+  border-bottom: 1px solid $ui-defoltcolor-black;
+}
+.whatido_content{
+ display: grid;
+ grid-template-columns: 50% 50%;
+
+  @media screen and (max-width:$ui-breakpoint-xl) {
+   display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width:$ui-breakpoint-md) {
+    display: flex;
+    flex-direction: column;
+  }
+  .whatido_content__background{
+    background-image: url("../img/Frame 3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    width: 100%;
+    height: auto;
+
+    @media screen and (max-width:$ui-breakpoint-xl) {
+      height: 990px;
+    }
+
+    @media screen and (max-width:$ui-breakpoint-md) {
+      height: 478px;
+    }
+  }
+}
+.whatido_content__description{
+  max-width: 766px;
+  padding: 70px 0 70px 110px;
+
+  @media screen and (max-width:$ui-breakpoint-xl) {
+    padding: 40px 0 40px 30px;
+  }
+  @media screen and (max-width:$ui-breakpoint-md) {
+    padding: 40px 0 40px 20px;
+  }
+
+  .whatido_content__name{
+     color: $ui-defoltcolor-black;
+    @include ui-inter (200);
+    font-size: 150px;
+    line-height: 100%;
+    padding-bottom: 100px;
+    text-transform: uppercase;
+    @media screen and (max-width:$ui-breakpoint-xl) {
+      text-align: center;
+      padding-bottom: 40px;
+      font-size: 140px;
+    }
+
+    @media screen and (max-width:$ui-breakpoint-md) {
+      text-align: center;
+      padding-bottom: 40px;
+      font-size: 50px;
+    }
+  }
+
+  .whatido_content__list{
+    counter-reset: my-awesome-counter;
+
+     .whatido_content__item{
+       counter-increment: my-awesome-counter;
+       font-size: 44px;
+       line-height: 1.2;
+       text-transform: uppercase;
+       @include ui-gilroy (600);
+       color: $ui-defoltcolor-black;
+       padding-bottom: 10px;
+
+       @media screen and (max-width:$ui-breakpoint-md) {
+         font-size: 26px;
+       }
+       &:before{
+         content: "0" counter(my-awesome-counter);
+         color: $ui-defoltcolor-black;
+         @include ui-gilroy (400);
+         font-size: 44px;
+         line-height: 1.1;
+         padding-right: 6px;
+         @media screen and (max-width:$ui-breakpoint-md) {
+           font-size: 26px;
+         }
+
+       }
+
+       .whatido_content__text--last{
+         @include ui-inter (400);
+         font-size: 20px;
+         line-height: 1;
+         text-transform: initial;
+         @media screen and (max-width:$ui-breakpoint-md) {
+           font-size: 16px;
+         }
+       }
+       .whatido_content__text{
+         @include ui-inter (400);
+         font-size: 20px;
+         line-height: 1;
+         padding-bottom: 40px;
+         text-transform: initial;
+         @media screen and (max-width:$ui-breakpoint-md) {
+           padding-bottom: 30px;
+           font-size: 16px;
+         }
+
+         &:nth-child(1){
+           border-bottom: 1px solid $ui-defoltcolor-black;
+           margin-bottom: 40px;
+           @media screen and (max-width:$ui-breakpoint-md) {
+             margin-bottom: 30px;
+           }
+         }
+
+       }
+     }
+  }
+}
