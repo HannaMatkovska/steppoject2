@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "dev": "gulp dev",
+    "build:gitlab": "docusaurus build --out-dir public",
     "build": "gulp build"
   },
   "author": "dan.it education",
